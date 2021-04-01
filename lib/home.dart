@@ -8,6 +8,7 @@ class Home extends StatefulWidget {
 }
 
 class HomeState extends State<Home> {
+  int counter = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,12 +17,19 @@ class HomeState extends State<Home> {
       ),
       body: Center(
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            Text("Ciao"),
-            Text("Social Hackathon"),
-            Text("Mobile app"),
+            Text("Contatore"),
+            Text("$counter"),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState( () {
+          counter = counter + 1)
+        });
+        }
       ),
     );
   }
