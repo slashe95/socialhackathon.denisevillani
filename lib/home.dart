@@ -27,7 +27,7 @@ class HomeState extends State<Home> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState( () {
-          counter = counter + 1)
+          counter = counter + 1 ;
         });
         }
       ),
